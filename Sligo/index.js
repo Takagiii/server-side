@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const home = require('./routes/gen')
+const home = require('./routes/home')
+const gen = require('./routes/gen')
 const cookieParser = require('cookie-parser');
 
 app.use(express.static('public'));
@@ -13,7 +14,9 @@ var handlebars = require('express-handlebars')
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.use(cookieParser());
+
 app.use('/', home)
+app.use('/genshin', gen)
 
 
 

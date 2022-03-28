@@ -102,7 +102,7 @@ var banner = {"Venti" : {"name" : "Venti",
 
 }
 
-router.get('/Genshin',  (req, res) => {
+router.get('/',  (req, res) => {
 
     var message = "";
      
