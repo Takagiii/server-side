@@ -1,0 +1,41 @@
+
+
+<h2> Edit </h2>
+<form method="POST">
+
+    <div class="form-group">
+        <label for='firstname'>Name</label>
+        <input type=text id='name' name='name' class='form-control' value={{person.name}} >
+    </div>
+    <div class="form-group">
+        <label for='picture'>Picture</label>
+        <input type=text id='imageur' name='imageur' class='form-control' value = "{{person.imageur}}" >
+    </div>
+    <div class="form-group">
+        <label for='rateup'>Rate Up Characters</label>
+        <input type=text id='characters' name='characters' class='form-control' value = "{{person.characters}}" >
+    </div>
+    <div class="form-group">
+        <label for='update'>Update</label>
+        <input type=text id='maj' name='maj' class='form-control' value = "{{person.maj}}" >
+    </div>
+      <div class="form-group">
+        <label for='release'>Release Date</label>
+        <input type="date" id='release' name='release' class='form-control' value = "{{person.release}}" >
+    </div>
+      <div class="form-group">
+        <label for='end'>End Date</label>
+        <input type="date" id='end' name='end' class='form-control' value = "{{person.end}}" >
+    </div>
+
+
+    <input type="hidden" id="id" name="_id" value="{{person._id}}" />
+
+
+    <button type=submit class="btn btn-primary">Save Changes </button>
+
+      <a href='/banner/{{person.name}}'><button type=button class="btn btn-outline-danger">Cancel</button>
+      </a> 
+
+
+</form>
